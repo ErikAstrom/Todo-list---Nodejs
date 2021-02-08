@@ -23,5 +23,3 @@ mongoose.connect(process.env.DB_CONNECTION,
             console.log("App is running ")
         })
     })
-
-

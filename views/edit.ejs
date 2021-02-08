@@ -1,15 +1,28 @@
-<form action="/edit" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/other.css">
+</head>
+<body>
+    <form action="/edit" method="post">
   
 
   
-    <input type="text" name="name" id="" value="<%= todo.name %>">
+        <input type="text" name="name" id="" value="<%= todo.name %>">
+        
+        <input type="text" name="id" value="<%=todo._id %>" hidden>
+         
+        <button type="submit"> Update </button>
+       
+       
+        
     
-    <input type="text" name="id" value="<%=todo._id %>" hidden>
-     
-    <button type="submit"> update </button>
-   
-   
     
+    </form>   
+</body>
+</html>
 
 
-</form>
