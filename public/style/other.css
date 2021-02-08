@@ -1,0 +1,33 @@
+body,html{
+
+   
+   background-image: url("/images/background.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   font-family: monospace;
+   height:100%;
+   width: 100%;
+}
+
+body {
+    display:flex;
+    align-items: center ;
+    justify-content: center;
+}
+
+input {
+    width:250px;
+}
+button{
+    background-color: rgba(204, 215, 252, 0.4);
+}
+a {
+    text-decoration: none;
+    color:black;
+    margin-left: 20px;
+    font-size: x-large;
+}
+
+
+

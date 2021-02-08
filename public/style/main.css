@@ -1,19 +1,28 @@
+html{
+    height:100%;
+    width: 100%;
+}
+
 body{
-    background: rgb(183, 220, 255);
+
     font-size:x-large;
    background-image: url("/images/background.jpg");
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
    font-family: monospace;
+   padding:0px;
+   margin:0px;
+   height:100%;
+   width: 100%;
 }
 
 #wrapper {
 display:flex;
 flex-direction: column;
-width:40%;
+width:60%;
 height:600px;
-background-color: rgba(209, 209, 209, 0.5);
+background-color: rgba(253, 226, 255, 0.5);
 border-radius: 50px;
 margin: 0 auto;
 padding:25 px;
@@ -26,42 +35,101 @@ h1 {
 }
 
 #inputBox {
+    display:flex;
     margin:0 auto;
     padding:10px;
+    align-items: center;
+    justify-content: center;
+
+}
+#inputBox input {
+    border-radius:5%;
+    width:150px;;
+    height:20px;
+    margin:15px;
 }
 
-.todoItem {
-    padding: 10px;
+#inputBox button {
+    border-radius:5%;
+    width:100;
+    height:20px;
+    margin:15px;
+    background-color: rgba(204, 215, 252, 0.4);
 }
+
 
 .todoP {
-    border:1px solid rgb(78, 105, 255);
-    background-color: rgba(170, 190, 255, 0.8);
-    padding: 10px;
+    display:flex;
+    border: 2px solid rgba(206, 207, 212, 0.8);
+    background-color: rgba(204, 215, 252, 0.4);
+    margin:0 auto;
+    margin-top:3px;
+    height:50px;
+    align-items: center;        
 }
 
-a {
+p>a {
+    display:flex;
     text-decoration: none;
-    font-size: x-large;
-    color:white;
-    background-color: rgb(255, 201, 195);
+    font-size: large;
+    color:black;
     border:1px solid white;
-    border-radius:10px;
-    flex-flow: row-reverse;
+    border-radius:5px;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    width:60px;
+    margin-left:15px;
+    margin-right: 5px;
     
 }
-
-input {
-    border-radius:25px;
-    width:150px;;
-    height:20px;
-    margin:15px;
+p>a:hover{
+    background-color: rgba(204, 215, 252, 0.8);
 }
 
-button {
-    border-radius:25px;
-    width:150px;;
-    height:20px;
-    margin:15px;
+
+
+#todoName{
+width:40%;
+margin-left: 10px;
+}
+#todoDate {
+    width:40%;
+    font-size: medium;
+}
+
+
+.showSort>a {
+    text-decoration: none;
+    color:black;
+
+
+}
+@media screen and (max-width: 600px){
+
+#wrapper {
+    width:100%;
     
+}
+body{
+    font-size: smaller;
+}
+p>a {
+    font-size: smaller;
+    margin-left:15px;
+    width:30px;
+    height:30px;
+
+}
+#todoName{
+    width:33%;
+    }
+ #todoDate {
+        width:33%;
+        font-size: smaller;
+    }
+
+
+
+
 }

@@ -14,21 +14,17 @@
 <div id="inputBox">
      <%- include("add-data.ejs") %>
 
-
-
-     
-     
-
-
-   
-    <a href="/?page=<%=(displayedTodos/todosPerPage)%>&&sorted=-1"> Sort oldest </a>
-    <a href="/?page=<%=(displayedTodos/todosPerPage)%>&&sorted=1"> Sort newest  </a>
   </div>
+  <span class="showSort">
+    <a href="/?page=<%=(displayedTodos/todosPerPage)%>&&sorted=-1"> Sort newest </a>
+    <a href="/?page=<%=(displayedTodos/todosPerPage)%>&&sorted=1"> Sort oldest  </a></span>
     <div id="todoContainer">
 
      <% for(let i=0; i<data.length; i++) { %>
 
-     <p class="todoP">  <%= data[i].name %> <span class="todoDate"><%= data[i].date.toString().split(" ").splice(0, 5) %> </span>
+     <p class="todoP"> 
+       <span id="todoName"> <%= data[i].name %> </span>
+      <span id="todoDate"><%= data[i].date.toString().split(" ").splice(0, 5) %> </span>
   
     
 
@@ -43,12 +39,12 @@
      </p>
 </div>
 
-       <% if(todoCalc !== displayedTodos/todosPerPage) { %>
-
-        <a href="/?page=<%=(displayedTodos/todosPerPage) +1%>"> Show more </a>
-      <% } else {   %>
-
-        <a href="/?page=1"> Show less </a>
+       <% if(todoCalc > displayedTodos/todosPerPage) { %>
+        <span class="showSort">
+        <a href="/?page=<%=(displayedTodos/todosPerPage) +1%>"> Show more </a></span>
+      <% } if(displayedTodos > 4) {   %>
+        <span class="showSort">
+        <a href="/?page=1"> Show less </a></span>
 
       <% } %>
     
