@@ -1,0 +1,67 @@
+body{
+    background: rgb(183, 220, 255);
+    font-size:x-large;
+   background-image: url("/images/background.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   font-family: monospace;
+}
+
+#wrapper {
+display:flex;
+flex-direction: column;
+width:40%;
+height:600px;
+background-color: rgba(209, 209, 209, 0.5);
+border-radius: 50px;
+margin: 0 auto;
+padding:25 px;
+margin-top: 50px;
+}
+
+h1 {
+    margin:0 auto;
+    padding: 10px;
+}
+
+#inputBox {
+    margin:0 auto;
+    padding:10px;
+}
+
+.todoItem {
+    padding: 10px;
+}
+
+.todoP {
+    border:1px solid rgb(78, 105, 255);
+    background-color: rgba(170, 190, 255, 0.8);
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-size: x-large;
+    color:white;
+    background-color: rgb(255, 201, 195);
+    border:1px solid white;
+    border-radius:10px;
+    flex-flow: row-reverse;
+    
+}
+
+input {
+    border-radius:25px;
+    width:150px;;
+    height:20px;
+    margin:15px;
+}
+
+button {
+    border-radius:25px;
+    width:150px;;
+    height:20px;
+    margin:15px;
+    
+}

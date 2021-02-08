@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo's</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <div id="wrapper">
+     <h1> My Todo's </h1>
+
+
+<div id="inputBox">
+     <%- include("add-data.ejs") %>
+
+
+
+     
+     
+
+
+   
+    <a href="/?page=<%=(displayedTodos/todosPerPage)%>&&sorted=-1"> Sort oldest </a>
+    <a href="/?page=<%=(displayedTodos/todosPerPage)%>&&sorted=1"> Sort newest  </a>
+  </div>
+    <div id="todoContainer">
+
+     <% for(let i=0; i<data.length; i++) { %>
+
+     <p class="todoP">  <%= data[i].name %> <span class="todoDate"><%= data[i].date.toString().split(" ").splice(0, 5) %> </span>
+  
+    
+
+
+        <a href="/edit/<%= data[i]._id %>" > Edit </a> 
+         
+        <a href="/delete/<%= data[i]._id %>"  > Delete </a> 
+ 
+       
+         
+    <% } %>
+     </p>
+</div>
+
+       <% if(todoCalc !== displayedTodos/todosPerPage) { %>
+
+        <a href="/?page=<%=(displayedTodos/todosPerPage) +1%>"> Show more </a>
+      <% } else {   %>
+
+        <a href="/?page=1"> Show less </a>
+
+      <% } %>
+    
+    </div>
+      
+</body>
+</html>
