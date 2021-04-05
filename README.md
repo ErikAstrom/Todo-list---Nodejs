@@ -2,6 +2,7 @@
 
 A todolist that saves tasks on mongodb
 
+>This project was created with ejs, css, js and node-js.
 
 ## Installation
 
