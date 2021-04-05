@@ -6,13 +6,13 @@ A todolist that saves tasks on mongodb
 
 
 ## Installation
-####Install the necessary npm packages and node_modules
+#### Install the necessary npm packages and node_modules
 ```bash
 npm i
 npm init -y
 ```
 
-####Connect your mongodb and choose a port
+#### Connect your mongodb and choose a port
 
 ```bash
 mongoose.connect(YOUR_DB_CONNECTION)
